@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+body {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Indie Flower', cursive;
+}
+#turn {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-size: 50px;
+    color: rgb(235, 0, 0);
+    font-weight: bold;
+}
+
+#board1, #board2 {
+    border: 4px solid rgb(16, 0, 156);
+    border-radius: 5px 5px 5px 5px;
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.col {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 136, 146, 0.274);
+    border-right: 1px solid gray;;
+    border-bottom: 1px solid gray;
+    display: inline-block;
+}
+.col.hidden {
+    background-color: rgb(255, 255, 255);
+
+}
+.col.hidden:hover {
+    background-color: rgb(0, 140, 255);
+}
+
+.row {
+    font-size: 0px;
+}
+.row:last-child .col {
+    border-bottom: none;
+}
+.row .col:last-child {
+    border-right: none;
+}
+
+#ships {
+    padding-top: 40px;
+    /* border: 1px solid black; */
+    text-align: left;
+    width: 270px;
+    margin-left: -300px;
+    padding-right: 20px;
+    display: inline-block;
+}
+
+.col.hidden.ship  {
+    background-color: red;
+    width: 35px;
+    height: 35px;
+    float: left;
+    
+}
+.ship1, .ship2, .ship3, .ship4 {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    cursor: move;
+    background-color: red;
+    margin-left: 2px;
+}
+.ship1 {
+    height: 35px;
+    width: 35px;
+}
+.ship2 {
+    height: 35px;
+    width: 70px;
+}
+.ship3 {
+    height: 35px;
+    width: 105px;
+}
+.ship4 {
+    height: 35px;
+    width: 140px;
+}
+
+.col.hidden.shipz {
+    background-color: rgba(34, 30, 255, 0.3);
+}
+.col.hidden.shipz.hit {
+    background-color: red;
+}
+.col.hidden.hit {
+    background-color: red;
+}
+.col.hidden.miss {
+    background-color: rgba(0, 204, 255, 0.5);
+}
+
+#rotate {
+    position: relative;
+    display: inline-block;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: center;
+    height: 150px;
+    width: 100px;
+    position: absolute;
+    padding-top: 5px;
+    margin-top: 30px;
+}
+#rotatebox {
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#ready {
+    padding-top: 20px;
+}
+button {
+    background-color: rgb(46, 0, 172);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+:-webkit-full-screen {
+    background-color: rgb(31, 31, 31);
+}
+  /* Firefox syntax */
+:-moz-full-screen {
+    background-color: rgb(31, 31, 31);
+}
+
+#fullscreen {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#time {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}

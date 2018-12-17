@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Battleship</title>
+    <link rel="stylesheet" href="stylesheets/game.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <button id='fullscreen' onclick="openFullscreen()">Fullscreen</button>
+        <span id="turn">Place your ships</span>
+
+        <div id='time'><span id='timer'></span>
+        </div>
+
+        <div id="board1">
+        </div>
+
+        <div id="board2">
+        </div>
+
+        <div id="reset">
+            <button type="reset">Reset</button>
+        </div>
+
+        <div id="ships">
+        </div>
+
+        <div id="rotate" ondrop="dropp(event)" ondragover="allowDrop(event)">
+            <span id='rotatebox'>Drag there to rotate</span>
+        </div>
+        <div id="ready">
+        </div>
+        
+        <script src="./javascripts/config.js">
+        </script>
+        <script src="./javascripts/main.js">
+        </script>
+    </main>
+</body>
+
+</html>
